@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.NET.Overview.Program", "CSharp.NET.Overview.Program\CSharp.NET.Overview.Program.csproj", "{144601FC-85FA-4610-9510-82EC52C23023}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.NET.Overview.Program", "CSharp.NET.Overview.Program\CSharp.NET.Overview.Program.csproj", "{144601FC-85FA-4610-9510-82EC52C23023}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Tipos de Dados", "1 - Tipos de Dados", "{A41801DC-FA86-4DEE-81D2-920525F6B6A6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Tipos de Dados", "2 - Tipos de Dados", "{A41801DC-FA86-4DEE-81D2-920525F6B6A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.NET.Overview.TiposDeDados", "CSharp.NET.Overview.TiposDeDados\CSharp.NET.Overview.TiposDeDados.csproj", "{356F23DA-0B79-4BA0-8F70-A65A3F8B5242}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.NET.Overview.TiposDeDados", "CSharp.NET.Overview.TiposDeDados\CSharp.NET.Overview.TiposDeDados.csproj", "{356F23DA-0B79-4BA0-8F70-A65A3F8B5242}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Armazenamentos Memoria", "1 - Armazenamentos Memoria", "{3236C189-D51A-43FD-8B20-D68AE4AA124E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -91,43 +91,96 @@ internal static class TiposDados
         ushort variavelUShortMinValue = ushort.MinValue;
         ushort variavelUShortMaxValue = ushort.MaxValue;
 
-        Console.WriteLine("Tipos de Valor" +
-            "\n");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("Variáveis de Tipo Valor");
+        Console.ResetColor();
 
-        Console.WriteLine($"Tipo [bool] | Valor Mínimo: {variavelBooleanaFalsa} & Valor Máximo  {variavelBooleanaVerdadeira}");
-        Console.WriteLine($"Tipo [byte] | Valor Mínimo: {variavelByteMinValue} & Valor Máximo : {variavelByteMaxValue}");
-        Console.WriteLine($"Tipo [sbyte] | Valor Mínimo: {variavelSByteMinValue} & Valor Máximo : {variavelSByteMaxValue}");
-        Console.WriteLine($"Tipo [decimal] | Valor Mínimo: {variavelDecimalMinValue} & Valor Máximo : {variavelDecimalMaxValue}");
-        Console.WriteLine($"Tipo [double] | Valor Mínimo: {variavelDoubleMinValue} & Valor Máximo : {variavelDoubleMaxValue}");
-        Console.WriteLine($"Tipo [float] | Valor Mínimo: {variavelFloatMinValue} & Valor Máximo : {variavelFloatMaxValue}");
-        Console.WriteLine($"Tipo [int] | Valor Mínimo: {variavelIntMinValue} & Valor Máximo : {variavelIntMaxValue}");
-        Console.WriteLine($"Tipo [uint] | Valor Mínimo: {variavelUIntMinValue} & Valor Máximo : {variavelUIntMaxValue}");
-        Console.WriteLine($"Tipo [long] | Valor Mínimo: {variavelLongMinValue} & Valor Máximo : {variavelLongMaxValue}");
-        Console.WriteLine($"Tipo [ulong] | Valor Mínimo: {variavelULongMinValue} & Valor Máximo : {variavelULongMaxValue}");
-        Console.WriteLine($"Tipo [short] | Valor Mínimo: {variavelShortMinValue} & Valor Máximo : {variavelShortMaxValue}");
-        Console.WriteLine($"Tipo [ushort] | Valor Mínimo: {variavelUShortMinValue} & Valor Máximo : {variavelUShortMaxValue}");
-        Console.WriteLine($"Tipo [char] | Valor Mínimo: {Convert.ToInt32(variavelCharMinValue)} & Valor Máximo : {Convert.ToInt32(variavelCharMaxValue)}");
-
-        Console.WriteLine( "\n" +
-@"      
-    Armazenamento Stack (Pilha): 
-
-    - Região da memória responsável pelo armazenamento de variáveis 
-    locais e dados relacionados a funções e métodos.
-      
-    - A área de memória chamada Stack segue a maneira de armazenamento LIFO 
-    (Last-In First-out - Ultimo a entrar Primeiro a sair)
-    Esse modelo de armazenamento visa remover da memória após utilização os dados que foram
-    incluidos por ultimo após finalização de um processo       
+        Console.WriteLine(@"      
+    É um tipo de dado que armazena diretamente seu valor real onde a variável está declarada
     
-    - Acesso direto aos dados, pois eles estão localizados onde a variável é alocada. Desta forma,
-    o acesso é mais rápido.
+    Os tipos valores podem ser amazenados na Stack e Heap
 
-    - Quando atribuídos a outra variável ou passados como parâmetros, uma cópia dos dados é feita.
+    - Stack: São armazenados na Stack se forem variáveis locais
+    - Heap: São armazenados no Heap se forem campos de instâncias (objetos tipo referência)
+    
+    Os tipos valores são destruídos quando saem do seu escopo
+
+    Quando uma váriavel recebe o valor de outra variável de tipo valor, esse valor é uma cópia.
+    Desta forma, serão duas variaveis com valores distintos (separados por endereços de memórias diferentes)
+
+    O gerenciamento do endereço de memória de um Tipo Valor é feito pelo Compilador e runtime .NET
 "
         );
+
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("Tipos de Valor");
+        Console.ResetColor();
+
+
+        Console.WriteLine(@$"
+    Tipo [bool] | Valor Mínimo:{variavelBooleanaFalsa} & Valor Máximo {variavelBooleanaVerdadeira}
+    Tipo [byte] | Valor Mínimo:{variavelByteMinValue} & Valor Máximo :{variavelByteMaxValue}"");
+    Tipo [sbyte] | Valor Mínimo:{variavelSByteMinValue} & Valor Máximo :{variavelSByteMaxValue}"");
+    Tipo [decimal] | Valor Mínimo:{variavelDecimalMinValue} & Valor Máximo :{variavelDecimalMaxValue}"");
+    Tipo [double] | Valor Mínimo:{variavelDoubleMinValue} & Valor Máximo :{variavelDoubleMaxValue}"");
+    Tipo [float] | Valor Mínimo:{variavelFloatMinValue} & Valor Máximo :{variavelFloatMaxValue}"");
+    Tipo [int] | Valor Mínimo:{variavelIntMinValue} & Valor Máximo :{variavelIntMaxValue}"");
+    Tipo [uint] | Valor Mínimo:{variavelUIntMinValue} & Valor Máximo :{variavelUIntMaxValue}"");
+    Tipo [long] | Valor Mínimo:{variavelLongMinValue} & Valor Máximo :{variavelLongMaxValue}"");
+    Tipo [ulong] | Valor Mínimo:{variavelULongMinValue} & Valor Máximo :{variavelULongMaxValue}"");
+    Tipo [short] | Valor Mínimo:{variavelShortMinValue} & Valor Máximo :{variavelShortMaxValue}"");
+    Tipo [ushort] | Valor Mínimo:{variavelUShortMinValue} & Valor Máximo :{variavelUShortMaxValue}"");
+    Tipo [char] | Valor Mínimo:{Convert.ToInt32(variavelCharMinValue)} & Valor Máximo :{Convert.ToInt32(variavelCharMaxValue)}"");
+
+");
+
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine(@$"
+    Tipo [struct]");
+        Console.ResetColor();
+
+        Console.WriteLine($@"
+    É um tipo valor que permite o agrupamento de variáveis de diversos tipos");
+
+        EstruturaDeDados estruturaDeDados = new EstruturaDeDados();
+        estruturaDeDados.Variavel1 = 1;
+        estruturaDeDados.Variavel2 = 1;
+
+        unsafe
+        {
+            EstruturaDeDados* ponteiroStruct = &estruturaDeDados;
+            long* ponteiroVariavel1 = &estruturaDeDados.Variavel1;
+            long* ponteiroVariavel2 = &estruturaDeDados.Variavel2;
+            int tamanhoEmBytesStruct = sizeof(EstruturaDeDados);
+
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(@$"
+    Alocação de Endereço de Memória");
+            Console.ResetColor();
+
+            Console.WriteLine(@$"
+    - Valor da estruturaDeDados (Struct)  = {estruturaDeDados} | Endereço Inicial de Memória da estruturaDeDados = {(long)ponteiroStruct}
+    - Valor da Variavel1 (long) = {estruturaDeDados.Variavel1} | Endereço Inicial de Memória da Variavel1 = {(long)ponteiroVariavel1}
+    - Valor da Variavel2 (long) = {estruturaDeDados.Variavel2} | Endereço Inicial de Memória da Variavel2 = {(long)ponteiroVariavel2}
+    - Tamanho em Bytes da estruturaDeDados (Struct) = Soma dos tamanhos dos seus campos = {tamanhoEmBytesStruct} bytes
+
+    O endereço de memória apresentado é o endereço inicial da variável. Seu tamanho está relacionado ao espaço em bytes que o seu tipo ocupa
+    Outro detalhe importante é entender que o Endereço Inicial de Memória da Struct (estruturaDeDados) é o mesmo do primeiro campo (Variavel1). Assim
+    como seu endereço final é o endereço final do seu último campo (Variavel2)
+");
+        }
+
     }
 
 
 }
 
+
+public struct EstruturaDeDados
+{
+    public long Variavel1;
+
+    public long Variavel2;
+
+}
