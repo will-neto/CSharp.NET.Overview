@@ -182,5 +182,4 @@ public struct EstruturaDeDados
     public long Variavel1;
 
     public long Variavel2;
-
 }
