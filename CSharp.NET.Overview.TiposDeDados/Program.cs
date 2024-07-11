@@ -48,12 +48,10 @@ while (prosseguir)
 //string variavelString = "Exemplo de string";
 //Console.WriteLine($"Tipo [string] | Valor: {variavelString}");
 
-
 // Valor máximo dos tipos "char" e "string"  é 65535 devido ser o valor máximo em hexadecimal (\uFFFF)
 
-
-// object
-// enum
+//object
+//enum
 //dynamic
 //DateTime
 //TimeSpan

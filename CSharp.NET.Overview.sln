@@ -19,9 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B44A51FF-3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Métodos", "3 - Métodos", "{612F5FE6-098E-4C69-9601-849205B2A87D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.NET.Overview.Metodos", "CSharp.NET.Overview.Metodos\CSharp.NET.Overview.Metodos.csproj", "{59A695AC-7E2E-451E-8A49-1407DB9D523D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.NET.Overview.Metodos", "CSharp.NET.Overview.Metodos\CSharp.NET.Overview.Metodos.csproj", "{59A695AC-7E2E-451E-8A49-1407DB9D523D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.NET.Overview.Core", "..\CSharp.NET.Overview.Core\CSharp.NET.Overview.Core\CSharp.NET.Overview.Core.csproj", "{EA761F93-FDE5-4724-9757-29D9E636B2F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.NET.Overview.Core", "CSharp.NET.Overview.Core\CSharp.NET.Overview.Core\CSharp.NET.Overview.Core.csproj", "{1248E93D-8E03-4712-A548-A2127196A610}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,10 +45,10 @@ Global
 		{59A695AC-7E2E-451E-8A49-1407DB9D523D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59A695AC-7E2E-451E-8A49-1407DB9D523D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59A695AC-7E2E-451E-8A49-1407DB9D523D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EA761F93-FDE5-4724-9757-29D9E636B2F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EA761F93-FDE5-4724-9757-29D9E636B2F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EA761F93-FDE5-4724-9757-29D9E636B2F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EA761F93-FDE5-4724-9757-29D9E636B2F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1248E93D-8E03-4712-A548-A2127196A610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1248E93D-8E03-4712-A548-A2127196A610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1248E93D-8E03-4712-A548-A2127196A610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1248E93D-8E03-4712-A548-A2127196A610}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,7 +57,7 @@ Global
 		{356F23DA-0B79-4BA0-8F70-A65A3F8B5242} = {A41801DC-FA86-4DEE-81D2-920525F6B6A6}
 		{EDAEB211-E854-4E43-A22E-5640D2B6E881} = {4AE21448-B8EA-4A13-B48E-ED6A486DC126}
 		{59A695AC-7E2E-451E-8A49-1407DB9D523D} = {612F5FE6-098E-4C69-9601-849205B2A87D}
-		{EA761F93-FDE5-4724-9757-29D9E636B2F0} = {B44A51FF-31F7-4D60-8BEA-C35AF4B56B11}
+		{1248E93D-8E03-4712-A548-A2127196A610} = {B44A51FF-31F7-4D60-8BEA-C35AF4B56B11}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {71162E2D-7858-4ECF-A2DF-007A1AF2E02B}
