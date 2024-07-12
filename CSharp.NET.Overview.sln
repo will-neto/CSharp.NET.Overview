@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Tipos de Dados", "2 - T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.NET.Overview.TiposDeDados", "CSharp.NET.Overview.TiposDeDados\CSharp.NET.Overview.TiposDeDados.csproj", "{356F23DA-0B79-4BA0-8F70-A65A3F8B5242}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Armazenamentos Memoria", "1 - Armazenamentos Memoria", "{3236C189-D51A-43FD-8B20-D68AE4AA124E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Armazenamentos em Memória", "1 - Armazenamentos em Memória", "{3236C189-D51A-43FD-8B20-D68AE4AA124E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Arquitetura .NET", "0 - Arquitetura .NET", "{4AE21448-B8EA-4A13-B48E-ED6A486DC126}"
 EndProject
@@ -17,11 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.NET.Overview.Arquite
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B44A51FF-31F7-4D60-8BEA-C35AF4B56B11}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Métodos", "3 - Métodos", "{612F5FE6-098E-4C69-9601-849205B2A87D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Métodos - Básico", "3 - Métodos - Básico", "{612F5FE6-098E-4C69-9601-849205B2A87D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.NET.Overview.Metodos", "CSharp.NET.Overview.Metodos\CSharp.NET.Overview.Metodos.csproj", "{59A695AC-7E2E-451E-8A49-1407DB9D523D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.NET.Overview.Core", "CSharp.NET.Overview.Core\CSharp.NET.Overview.Core\CSharp.NET.Overview.Core.csproj", "{1248E93D-8E03-4712-A548-A2127196A610}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Métodos - Avançado", "Métodos - Avançado", "{F35F7ED9-DA48-430D-B0AE-DC19AB060D93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
