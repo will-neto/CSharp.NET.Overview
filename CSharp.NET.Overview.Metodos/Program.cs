@@ -9,8 +9,43 @@ static void Execucao()
     string value;
 
     Console.WriteLine(@"1 - Explicação sobre Métodos
-2 - Tipos de Métodos
+2 - Métodos sem Retorno sem Argumento
+3 - Métodos sem Retorno com Argumento
+4 - Métodos com Retorno sem Argumento
+5 - Métodos com Retorno sem Argumento
+6 - Métodos Estáticos
+8 - Métodos Anônimos
+7 - Métodos de Extensão
+9 - Funções Locais
+10 - Método com Modificado Params
+11 - Parâmetros opcionais e nomeados
 ");
+
+    /**
+     *  Tópicos Métodos Avançados
+        
+        Expressões lambda e Inferência de tipo em expressões lambda
+        
+        Métodos Assíncronos com async e await e Métodos com tipos de retorno async
+        Métodos Genéricos e Métodos Genéricos comCovariantes e Contravariantes
+        Expressões corpo de expressão para métodos e propriedades e Inicializadores automáticos de propriedades.
+        Retorno por referência (ref returns)
+        Tuplas e desestruturação de tuplas
+        Definição de default para tipos genéricos.
+        in parâmetros, Ref readonly retornos e ref estruturação de argumentos e retornos.
+        Stackalloc em expressões, Métodos genéricos com restrições unmanaged e System.Enum, System.Delegate.
+        Interfaces com implementação padrão
+        Métodos assíncronos com streams (IAsyncEnumerable)
+        Pattern matching aprimorado e Expressões lambda atualizadas com recursos de pattern matching.
+        Funções locais estáticas.
+        Métodos de extensão de interfaces.
+        init acessores.
+        Métodos locais com atributos
+        Tipos record.
+        Métodos de extensão com interpolação de string.
+        Parâmetros genéricos em métodos anônimos
+        Delegates com tipos de retorno async aprimorados.
+     */
 
     value = Console.ReadLine()!;
 
@@ -182,4 +217,95 @@ static void Explicacao() {
         
     ");
 }
+
+
+#region . . . Metodo sem Retorno Sem Argumento . . .
+
+static void MetodoSemRetornoSemArgumento()
+{
+
+}
+
+#endregion
+
+#region . . . Metodo sem Retorno com Argumento . . .
+
+static void MetodosSemRetornoComArgumento()
+{
+
+}
+
+#endregion
+
+#region . . . Metodo com Retorno . . .
+
+static void MetodoComRetornoSemArgumento()
+{
+
+}
+
+#endregion
+
+#region . . . Metodo com Retorno Com Argumento . . .
+
+static void MetodoComRetornoComArgumento()
+{
+
+}
+
+
+#endregion
+
+#region . . . Metodos Estaticos . . .
+
+static void MetodosEstaticos()
+{
+
+}
+
+#endregion
+
+#region . . . Metodos Anonimos . . .
+
+static void MetodosAnonimos()
+{
+
+}
+
+#endregion
+
+#region . . . Metodos de Extensao . . .
+
+static void MetodosDeExtensao()
+{
+
+}
+
+#endregion
+
+#region . . . Funcoes Locais . . .
+
+static void FuncoesLocais()
+{
+
+}
+
+#endregion
+
+#region . . . Metodo com Modificador Params
+static void MetodoComModificadorParams()
+{
+
+}
+
+#endregion
+
+
+#region . . . Parametros Opcionais e Nomeados
+static void ParametrosOpcionaisNomeados()
+{
+
+}
+
+#endregion
 
