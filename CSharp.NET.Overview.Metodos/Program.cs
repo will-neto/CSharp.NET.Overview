@@ -11,14 +11,13 @@ static void Execucao()
     Console.WriteLine(@"1 - Explicação sobre Métodos
 2 - Métodos sem Retorno sem Argumento
 3 - Métodos sem Retorno com Argumento
-4 - Métodos com Retorno sem Argumento
-5 - Métodos com Retorno sem Argumento
-6 - Métodos Estáticos
-8 - Métodos Anônimos
+4 - Métodos com Retorno
+5 - Métodos Estáticos
+6 - Métodos Anônimos
 7 - Métodos de Extensão
-9 - Funções Locais
-10 - Método com Modificado Params
-11 - Parâmetros opcionais e nomeados
+8 - Funções Locais
+9 - Método com Modificado Params
+10 - Parâmetros opcionais e nomeados
 ");
 
     /**
@@ -61,6 +60,31 @@ static void Execucao()
                 Explicacao();
                 break;
             case 2:
+                MetodoSemRetornoSemArgumento();
+                break;
+            case 3:
+                MetodoSemRetornoComArgumento();
+                break;
+            case 4:
+                MetodoComRetorno();
+                break;
+            case 5:
+                MetodoEstatico();
+                break;
+            case 6:
+                MetodoAnonimo();
+                break;
+            case 7:
+                MetodoDeExtensao();
+                break;
+            case 8:
+                FuncaoLocal();
+                break;
+            case 9:
+                MetodoComModificadorParams();
+                break;
+            case 10:
+                ParametrosOpcionaisNomeados();
                 break;
             default:
                 break;
@@ -218,20 +242,100 @@ static void Explicacao() {
     ");
 }
 
-
 #region . . . Metodo sem Retorno Sem Argumento . . .
 
 static void MetodoSemRetornoSemArgumento()
 {
+    ConsoleUtils.Titulo(@"Métodos Sem Retorno");
 
+    Console.WriteLine(@"
+    Métodos sem Retorno, também conhecidos como método ""void"", são usados quando uma operação não possui a necessidade de retornar
+    algum valor para quem chama. São aconselhados em operações que alteram o estado de uma classe, logs, interações com interfaces
+    de usuários, execução de processos assíncronos que não precisamos aguardar retorno e nem ficar bloqueados, também conhecidos
+    como ""Fire-and-Forget""
+    ");
+
+    ConsoleUtils.Titulo(@"
+    Exemplo de declaração de método sem retorno (void)", ConsoleColor.Cyan);
+
+    Console.WriteLine(@"
+    public void MeuMetodoSemRetorno() {
+        Console.WriteLine(""Processo que será disparado e não requer uma linha de retorno no final do método"");
+    }
+    ");
+
+    // Chamada do método vazio
+    MeuMetodoSemRetorno();
+
+
+    // Esse método é também conhecido como Função Local, mas falaremos dele mais pra frente
+    void MeuMetodoSemRetorno()
+    {
+        Console.WriteLine(@"
+    Processo que será disparado e não requer uma linha de retorno no final do método"
+        );
+    }
 }
 
 #endregion
 
 #region . . . Metodo sem Retorno com Argumento . . .
 
-static void MetodosSemRetornoComArgumento()
+static void MetodoSemRetornoComArgumento()
 {
+    ConsoleUtils.Titulo(@"Métodos Sem Retorno (com argumentos)");
+
+    Console.WriteLine(@"
+    Métodos com argumentos são métodos que possibilitam a entrada de valores antes da operação se iniciar. Esses argumentos podem ser usados
+    durante o processo. Seja um método de cálculo que precisa de dois números para realizar uma operação matemática básica ou um método
+    que precise gerar um PDF que precisa receber o título, o texto ou qualquer informação para a geração do arquivo.
+
+    Podemos assinar um método com argumento (com exemplo de um método void) através da seguinte maneira:
+    
+    public void MeuMetodoSoma([tipo-do-dado] [nome-do-argumento1], [tipo-do-dado] [nome-da-argumento2], ...N argumentos) {
+        ... Conteúdo do Código
+    }
+
+    A transcrição do método, por exemplo, ficaria
+
+    public void MeuMetodoSoma(int valor1, int valor2) {
+        ... Conteúdo do Código
+    }
+
+    Já a sua chamada se dá através da seguinte forma:
+
+    int minhaVariavelInt1 = 10;
+    int minhaVariavelInt2 = 5;
+
+    MeuMetodoSoma(minhaVariavelInt1, minhaVariavelInt2);
+
+    Também podemos passar o valor diretamente na chamada do método
+
+    MeuMetodoSoma(10, 5);
+
+    Execução real:
+    ");
+
+
+    int minhaVariavelInt1 = 10;
+    int minhaVariavelInt2 = 5;
+
+    // Chamada do método vazio
+    MeuMetodoSoma(minhaVariavelInt1, minhaVariavelInt2);
+
+
+    // Esse método é também conhecido como Função Local, mas falaremos dele mais pra frente
+    void MeuMetodoSoma(int valor1, int valor2)
+    {
+        Console.WriteLine(@$"
+    A soma dos valores {valor1} + {valor2} é igual a = {valor1 + valor2};
+        ");
+    }
+
+    ConsoleUtils.Titulo(@"
+    Um fato importante é que as variáveis passadas no métodos são tratados como parâmetros e dentro do método são tratados como argumentos"
+    );
+
 
 }
 
@@ -239,26 +343,62 @@ static void MetodosSemRetornoComArgumento()
 
 #region . . . Metodo com Retorno . . .
 
-static void MetodoComRetornoSemArgumento()
+static void MetodoComRetorno()
 {
+    ConsoleUtils.Titulo(@"Métodos Com Retorno");
 
+    Console.WriteLine(@"
+    Métodos com Retorno são usados para devolver um valor resultante (ou não) das operações executadas pelo método.
+    O retorno pode ser qualquer tipo de dados, mas só pode ter um retorno associado.
+
+    Podemos assinar um método com retorno da seguinte maneira
+    
+    public int MeuMetodoSoma([tipo-do-dado] [nome-do-argumento1], [tipo-do-dado] [nome-da-argumento2], ...) {
+        ... Conteúdo do Código
+    }
+
+    A transcrição do método, por exemplo, ficaria
+
+    public int MeuMetodoSoma(int valor1, int valor2) {
+        return valor1 + valor2;
+    }
+
+    A palavra-chave ""return"" indica o valor que será retornado pelo método
+    
+    A sua chamada se dá através da seguinte forma:
+
+    int minhaVariavelInt1 = 10;
+    int minhaVariavelInt2 = 5;
+
+    int resultado = MeuMetodoSoma(minhaVariavelInt1, minhaVariavelInt2);
+
+    Console.WriteLine(""O resultado é "" + resultado);
+
+    Execução real:
+    ");
+
+    int minhaVariavelInt1 = 10;
+    int minhaVariavelInt2 = 5;
+
+    int resultado = MeuMetodoSoma(minhaVariavelInt1, minhaVariavelInt2);
+
+    Console.WriteLine(@"
+        O resultado é " + resultado);
+
+
+    int MeuMetodoSoma(int valor1, int valor2)
+    {
+        return valor1 + valor2;
+    }
 }
 
-#endregion
-
-#region . . . Metodo com Retorno Com Argumento . . .
-
-static void MetodoComRetornoComArgumento()
-{
-
-}
 
 
 #endregion
 
 #region . . . Metodos Estaticos . . .
 
-static void MetodosEstaticos()
+static void MetodoEstatico()
 {
 
 }
@@ -267,7 +407,7 @@ static void MetodosEstaticos()
 
 #region . . . Metodos Anonimos . . .
 
-static void MetodosAnonimos()
+static void MetodoAnonimo()
 {
 
 }
@@ -276,7 +416,7 @@ static void MetodosAnonimos()
 
 #region . . . Metodos de Extensao . . .
 
-static void MetodosDeExtensao()
+static void MetodoDeExtensao()
 {
 
 }
@@ -285,7 +425,7 @@ static void MetodosDeExtensao()
 
 #region . . . Funcoes Locais . . .
 
-static void FuncoesLocais()
+static void FuncaoLocal()
 {
 
 }
