@@ -1,5 +1,6 @@
 ﻿
 using CSharp.NET.Overview.Core;
+using CSharp.NET.Overview.Metodos;
 
 ConsoleUtils.InicializarConsole(Execucao);
 
@@ -208,7 +209,7 @@ static void Explicacao() {
         da sua classe, optar por métodos normais. Se o método não necessita alterar o estado (campos) da classe, então faz mais sentido trabalhar com um
         método estático que receba os dados ao qual seja necessário trabalha via argumento.
 
-        Outro ponto importante é entendermos que a utilização de métodos não estáticos e estáticos não implica muito na questão de uso de memória, tendo em
+        Outro ponto importante é entendermos que a utilização de métodos não estáticos e estáticos não implica na questão de uso de memória, tendo em
         vista que os dois métodos são criados apenas uma vez no Code Section (espaço da memória dedicado a métodos).
     ");
 
@@ -400,6 +401,32 @@ static void MetodoComRetorno()
 
 static void MetodoEstatico()
 {
+    ConsoleUtils.Titulo(@"Métodos Estáticos");
+
+    Console.WriteLine(@$"
+    Métodos estáticos como comentado anteriormente, são métodos atribuidos com o modificador ""static"". Métodos que fazem parte da classe e
+    que podem ser utilizados sem a necessidade de uma instância, tendo em vista que seu comportamento não afeta os atributos dos atributos
+    de instância. A recomendação de uso de métodos estáticos e não-estáticos também foi comentado anteriormente.
+
+    Exemplo declaração método estático:
+
+    class Calculadora {{
+        // Método estático
+        public static double Soma(double valor1, double valor2) {{
+            return valor1 + valor2;
+        }}
+
+    }}
+
+    static class Program {{
+        Console.WriteLine(Calculadora.Soma(10, 5)); // Retorno 15
+    }}
+
+    Exemplo de uso:
+
+    {Calculadora.Soma(10, 5)}
+
+    ");
 
 }
 
@@ -407,8 +434,15 @@ static void MetodoEstatico()
 
 #region . . . Metodos Anonimos . . .
 
+
 static void MetodoAnonimo()
 {
+    ConsoleUtils.Titulo(@"Métodos Anônimos");
+
+    Console.WriteLine(@$"
+
+
+    ");
 
 }
 
